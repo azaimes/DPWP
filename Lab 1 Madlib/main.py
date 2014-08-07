@@ -12,7 +12,7 @@ while start != 0:
     name = raw_input("What is your name? ")
     hours = float(raw_input("How many hours do you spend studying? "))
     job = raw_input("What job do plan to get after graduation? ")
-    gpa = float(raw_input("What is your current gpa? "))
+    gpa = float(raw_input("What is your current gpa? ")) #made float to handle decimal gpa
     grad_year = raw_input("What year will you graduate? ")
     born_year = raw_input("What year were you born? ")
 
