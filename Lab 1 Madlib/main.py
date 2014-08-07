@@ -38,7 +38,11 @@ while start !=0:
         return after
     #set variable for above function
     ag = after_grad(age)
+    #dictionary
+    life = dict()
+    life = {"Family":"Kids", "Job":"Career"}
     
+
 
 
 
