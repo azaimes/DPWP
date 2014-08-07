@@ -57,7 +57,22 @@ while start !=0:
             not_good = "It's not looking good for you!"
             return not_good
 
-    print grades()
+    #conditional for studytime
+    def study_time():
+        if hours >= 20:
+            good = " you study hard!"
+            return good
+        else:
+            bad = " you need to study more!"
+            return bad
+
+    #story
+    print "Hello, " + name + " Your mission is to succeed in class!" + " Based on your answer of spending "\
+          + hours + " hours studying, " + study_time() + " If you want to be a great " + job + \
+          " you need to be successful in school! " + "All work and no play isn't good for you." + \
+          "Spend some time enjoying " + games_played + ". " + "After graduation, " + life["Family"] + life["Job"] + \
+        " can make things difficult! " + " But you will only be " + ag + " years old," + \
+          " and in 10 years you will be " + ag + " and be a successful " + job + "!"
 
 
 
