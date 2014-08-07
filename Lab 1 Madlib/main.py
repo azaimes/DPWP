@@ -1,16 +1,16 @@
 '''
 Name: Adam Zaimes
 '''
-#while loop to make the program continuous
+# while loop to make the program continuous
 
 start = 1
-while start !=0:
+while start != 0:
 
     #variables
     name = raw_input("What is your name? ")
-    hours = raw_input("How many hours do you spend studying? ")
+    hours = float(raw_input("How many hours do you spend studying? "))
     job = raw_input("What job do plan to get after graduation? ")
-    gpa = raw_input("What is your current gpa? ")
+    gpa = float(raw_input("What is your current gpa? "))
     grad_year = raw_input("What year will you graduate? ")
     born_year = raw_input("What year were you born? ")
 
@@ -36,43 +36,45 @@ while start !=0:
     def after_grad(x):
         after = x + 10
         return after
+
     #set variable for above function
     ag = after_grad(age)
     #dictionary
     life = dict()
-    life = {"Family":"Kids", "Job":"Career"}
+    life = {"Family": "Kids", "Job": "Career"}
     #conver gpa to integer
     gpa = int(gpa)
+    hours = int(hours)
     #conditional statement for gpa
 
     def grades():
         if gpa >= 3:
-            great = "Great job!"
+            great = "great job!"
             return great
 
         elif gpa <= 2:
-            harder = "Try harder!"
+            harder = "try harder!"
             return harder
         else:
             not_good = "It's not looking good for you!"
             return not_good
+    #conditional for study time
 
-    #conditional for studytime
     def study_time():
-        if hours >= 20:
-            good = " you study hard!"
-            return good
+        if hours >= 15:
+            good_student = " you study hard!"
+            return good_student
         else:
-            bad = " you need to study more!"
-            return bad
-
+            bad_student = " you need to study more!"
+            return bad_student
     #story
-    print "Hello, " + name + " Your mission is to succeed in class!" + " Based on your answer of spending "\
-          + hours + " hours studying, " + study_time() + " If you want to be a great " + job + \
-          " you need to be successful in school! " + "All work and no play isn't good for you." + \
-          "Spend some time enjoying " + games_played + ". " + "After graduation, " + life["Family"] + life["Job"] + \
-        " can make things difficult! " + " But you will only be " + ag + " years old," + \
-          " and in 10 years you will be " + ag + " and be a successful " + job + "!"
+    print "Hello, " + name + "! Your mission is to succeed in class!" + " Based on your answer of spending " \
+          + str(hours) + " hours studying," + study_time() + " If you want to be a great " + job + \
+          " you need to be successful in school! " + " Your GPA is " + str(gpa) + " " + grades() + \
+          " All work and no play isn't good for you." + " Spend some time enjoying " + str(games_played) + ". " \
+          + "After graduation " + life["Family"] + " and " + life["Job"] + " can make things difficult! " \
+          + " But you will only be " + str(age) + " years old, and in 10 years you will be " + str(ag) + \
+          " and successful!"
 
 
 
