@@ -1,7 +1,9 @@
 '''
 Name: Adam Zaimes
+Class: DPWP
+Date: 8/7/2014
 '''
-# while loop to make the program continuous
+# while loop to make the program continuous so user can try different responses
 
 start = 1
 while start != 0:
@@ -42,8 +44,9 @@ while start != 0:
     #dictionary
     life = dict()
     life = {"Family": "kids", "Job": "career"}
-    #conver gpa to integer
+    #convert gpa to integer
     gpa = int(gpa)
+    #convert hours to integer
     hours = int(hours)
     #conditional statement for gpa
 
