@@ -41,7 +41,7 @@ while start != 0:
     ag = after_grad(age)
     #dictionary
     life = dict()
-    life = {"Family": "Kids", "Job": "Career"}
+    life = {"Family": "kids", "Job": "career"}
     #conver gpa to integer
     gpa = int(gpa)
     hours = int(hours)
