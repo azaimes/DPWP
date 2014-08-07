@@ -41,9 +41,23 @@ while start !=0:
     #dictionary
     life = dict()
     life = {"Family":"Kids", "Job":"Career"}
-    
+    #conver gpa to integer
+    gpa = int(gpa)
+    #conditional statement for gpa
 
+    def grades():
+        if gpa >= 3:
+            great = "Great job!"
+            return great
 
+        elif gpa <= 2:
+            harder = "Try harder!"
+            return harder
+        else:
+            not_good = "It's not looking good for you!"
+            return not_good
+
+    print grades()
 
 
 
