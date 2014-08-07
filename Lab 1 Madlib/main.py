@@ -22,8 +22,8 @@ while start != 0:
     age = grad_year - born_year
 
     #setup array
-    relax = raw_input("What is your favorite video game?")
-    relax2 = raw_input("What is your second favorite video game?")
+    relax = raw_input("What is your favorite video game? ")
+    relax2 = raw_input("What is your second favorite video game? ")
 
     #array to get input from above
     games_played = []
