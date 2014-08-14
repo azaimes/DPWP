@@ -14,8 +14,17 @@ class MainHandler(webapp2.RequestHandler):
         joe.calc_balance()
 
         colleen = ballance()
+        colleen.initial_balance = 24128.96
+        colleen.debit1 = 45.33
+        colleen.debit2 = 1124.95
+        colleen.debit3 = 450.44
+        colleen.debit4 = 99.99
+        colleen.credit1 = 1200.00
+        colleen.calc_balance()
 
         
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
