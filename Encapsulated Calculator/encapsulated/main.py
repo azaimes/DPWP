@@ -133,7 +133,10 @@ class Balance(object):
         self.credit1 = 0
         self.__end_balance = 0
 
-  
+    @property
+    def end_balance(self):
+        return self.__end_balance
+
 
 #never touch this!!
 app = webapp2.WSGIApplication([
