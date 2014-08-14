@@ -123,6 +123,18 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(page_head + page_body + page_close)
 
 
+class Balance(object):
+    def __init__(self):
+        self.initial_balance = 0
+        self.debit1 = 0
+        self.debit2 = 0
+        self.debit3  = 0
+        self.debit4 = 0
+        self.credit1 = 0
+        self.__end_balance = 0
+
+  
+
 #never touch this!!
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
