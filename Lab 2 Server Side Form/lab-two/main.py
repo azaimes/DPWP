@@ -31,7 +31,12 @@ class MainHandler(webapp2.RequestHandler):
         <title>Lab 2 Server Side Form</title>
     </head>
     <body>'''
-        page_body = '''
+        page_body = '''<form methord="GET">
+            <label>Name</label><input type="text" name="user" />
+            <label>Email</label><input type="text" name="email" /><br>
+            <label>Address</label><input type="text" name="address" />
+            <label>City</label><input type="text" name="city" />
+            <label>State</label><input type="text" name="state" /><br>
         '''
         page_close = '''
     </body>
