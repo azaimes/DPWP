@@ -1,12 +1,13 @@
 body {
 	background: lightgoldenrodyellow;
 }
+/* centers the page inside the browser window */
 .wrapper {
     margin: 0 auto;
     width: 40%;
     padding-top: 40px;
 }
-
+/* main page customer list format */
 .customers {
 	width: 500px;
 	background: #9af595;
@@ -14,6 +15,7 @@ body {
 	border-radius: 30px;
 	padding: 10px;
 }
+/* detailed customer info formatting */
 .cus_wrap {
     width: 300px;
     padding-left: 150px;
@@ -22,7 +24,7 @@ body {
 h1 {
 	text-align: center;
 }
-
+/* links formatting */
 a:link {
 	display: block;
 	width: 200px;
