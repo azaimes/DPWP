@@ -1,0 +1,47 @@
+body {
+	background: lightgoldenrodyellow;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 40px;
+}
+
+.customers {
+	width: 500px;
+	background: #9af595;
+	border: 1px solid #000;
+	border-radius: 30px;
+	padding: 10px;
+}
+.cus_wrap {
+    width: 300px;
+    padding-left: 150px;
+}
+
+h1 {
+	text-align: center;
+}
+
+a:link {
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #9d9d9d;
+	border-radius: 10px;
+	text-decoration: none;
+	color: #000;
+	background: #faf8d3;
+}
+
+a:visited {
+	background: #23a966;
+	color: #000;
+}
+
+a:hover {
+	background: #03ff29;
+	color: #000;
+}
