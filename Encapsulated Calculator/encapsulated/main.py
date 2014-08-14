@@ -106,7 +106,7 @@ class MainHandler(webapp2.RequestHandler):
 </html>'''
 
         page_body = page_body.format(**locals())
-
+        #gets data from data objects and displays information based on witch option is selected
         if self.request.GET:
             name = self.request.GET['name']
             balance = self.request.GET['balance']
@@ -123,18 +123,19 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(page_head + page_body + page_close)
 
 
-class Balance(object):
+class Balance(object): #sets up the structure for doing the calculations
     def __init__(self):
         self.initial_balance = 0
         self.debit1 = 0
         self.debit2 = 0
-        self.debit3  = 0
+        self.debit3 = 0
         self.debit4 = 0
         self.credit1 = 0
         self.__end_balance = 0
 
     @property
     def end_balance(self):
+        #calculates the ending balance
         return self.__end_balance
 
     @end_balance.setter
