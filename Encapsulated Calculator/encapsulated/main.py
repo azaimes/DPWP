@@ -31,6 +31,16 @@ class MainHandler(webapp2.RequestHandler):
         bubba.credit1 = 4533.00
         bubba.calc_balance()
 
+        dawn = balance()
+        dawn.initial_balance = 50345.44
+        dawn.debit1 = 883.22
+        dawn.debit2 = 99.99
+        dawn.debit3 = 88.42
+        dawn.debit4 = 19.99
+        dawn.credit1 = 999.00
+        dawn.calc_balance()
+
+
 
 
 
