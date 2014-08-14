@@ -40,6 +40,16 @@ class MainHandler(webapp2.RequestHandler):
         dawn.credit1 = 999.00
         dawn.calc_balance()
 
+        stanley = balance()
+        stanley.initial_balance = 24845.21
+        stanley.debit1 = 603.22
+        stanley.debit2 = 18.89
+        stanley.debit3 = 358.34
+        stanley.debit4 = 88.99
+        stanley.credit1 = 2477.00
+        stanley.calc_balance()
+
+
 
 
 
