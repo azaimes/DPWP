@@ -5,6 +5,7 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         #sets up balances and functions
+        #customer 1
         joe = Balance()
         joe.initial_balance = 42128.96
         joe.debit1 = 250.88
@@ -14,6 +15,7 @@ class MainHandler(webapp2.RequestHandler):
         joe.credit1 = 995.00
         joe.calc_balance()
 
+        #customer 2
         colleen = Balance()
         colleen.initial_balance = 24128.96
         colleen.debit1 = 45.33
@@ -23,6 +25,7 @@ class MainHandler(webapp2.RequestHandler):
         colleen.credit1 = 1200.00
         colleen.calc_balance()
 
+        #customer 3
         bubba = Balance()
         bubba.initial_balance = 180454.55
         bubba.debit1 = 8983.43
@@ -32,6 +35,7 @@ class MainHandler(webapp2.RequestHandler):
         bubba.credit1 = 4533.00
         bubba.calc_balance()
 
+        #customer 4
         dawn = Balance()
         dawn.initial_balance = 50345.44
         dawn.debit1 = 883.22
@@ -41,6 +45,7 @@ class MainHandler(webapp2.RequestHandler):
         dawn.credit1 = 999.00
         dawn.calc_balance()
 
+        #customer 5
         stanley = Balance()
         stanley.initial_balance = 24845.21
         stanley.debit1 = 603.22
@@ -50,7 +55,7 @@ class MainHandler(webapp2.RequestHandler):
         stanley.credit1 = 2477.00
         stanley.calc_balance()
 
-        #start webpage
+        #start of webpage
         page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
@@ -60,7 +65,7 @@ class MainHandler(webapp2.RequestHandler):
     <body>
         <div class="wrapper">
     '''
-
+        #provides a list of customers that can be selected to view detailed account information
         page_body = '''
 
         <div class="customers">
@@ -85,7 +90,7 @@ class MainHandler(webapp2.RequestHandler):
             {stanley.debit1}&debit2={stanley.debit2}&debit3={stanley.debit3}&debit4={stanley.debit4}&credit=
             {stanley.credit1}&end_balance={stanley.end_balance}">Stanley</a><br/>
         </div>'''
-
+        #displays the detailed account info of the customer after selected on the home page
         page_info = '''<div class="customers">
         <div class="cus_wrap"
         <p>Name: {name}</p>
@@ -104,7 +109,7 @@ class MainHandler(webapp2.RequestHandler):
         </div>
     </body>
 </html>'''
-
+        #allows using data from the data objects inside of the html
         page_body = page_body.format(**locals())
         #gets data from data objects and displays information based on witch option is selected
         if self.request.GET:
@@ -131,7 +136,7 @@ class Balance(object): #sets up the structure for doing the calculations
         self.debit3 = 0
         self.debit4 = 0
         self.credit1 = 0
-        self.__end_balance = 0
+        self.__end_balance = 0 #private object becomes usable with the setter
 
     @property
     def end_balance(self):
@@ -140,6 +145,7 @@ class Balance(object): #sets up the structure for doing the calculations
 
     @end_balance.setter
     def end_balance(self, new_end_balance):
+        #allows the ending balance to be modified
         self.__end_balance = new_end_balance
 
     def calc_balance(self):
