@@ -123,8 +123,9 @@ class MainHandler(webapp2.RequestHandler):
             end_balance = self.request.GET['end_balance']
 
             page_info = page_info.format(**locals())
+            #outputs the detailed account data
             self.response.write(page_head + page_info + page_close)
-        else:
+        else:#outputs the customer selection info
             self.response.write(page_head + page_body + page_close)
 
 
