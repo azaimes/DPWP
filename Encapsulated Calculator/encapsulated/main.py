@@ -22,7 +22,18 @@ class MainHandler(webapp2.RequestHandler):
         colleen.credit1 = 1200.00
         colleen.calc_balance()
 
-        
+        bubba = balance()
+        bubba.initial_balance = 180454.55
+        bubba.debit1 = 8983.43
+        bubba.debit2 = 125.65
+        bubba.debit3 = 774.90
+        bubba.debit4 = 12.99
+        bubba.credit1 = 4533.00
+        bubba.calc_balance()
+
+
+
+
 
 
 
