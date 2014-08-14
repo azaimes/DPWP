@@ -1,4 +1,9 @@
-
+'''
+Name: Adam Zaimes
+Date: 8/14/14
+Class: DPWP
+Assignment: Encapsulated Calculator
+'''
 import webapp2
 
 
