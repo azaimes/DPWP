@@ -86,7 +86,28 @@ class MainHandler(webapp2.RequestHandler):
             {stanley.credit1}&end_balance={stanley.end_balance}">Stanley</a><br/>
         </div>'''
 
+        page_info = '''<div class="customers">
+        <div class="cus_wrap"
+        <p>Name: {name}</p>
+        <p>Initial balance: {balance}</p>
+        <p>Debit #1: {debit1}</p>
+        <p>Debit #2: {debit2}</p>
+        <p>Debit #3: {debit3}</p>
+        <p>Debit #4: {debit4}</p>
+        <p>Credit: {credit}</p>
+        <p>Ending Balance: {end_balance}</p>
+        </div>
+        <a href="?">Return</a></div>
+        '''
 
+        page_close = '''
+        </div>
+    </body>
+</html>'''
+
+        page_body = page_body.format(**locals())
+
+        
 #never touch this!!
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
