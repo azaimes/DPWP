@@ -1,0 +1,59 @@
+body {
+    background-color: lightgrey;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 40px;
+}
+
+fieldset {
+    width: 500px;
+    border-radius: 30px;
+    background-color: #339966;
+}
+fieldset h1 {
+    text-align:center;
+}
+label.field {
+    text-align: right;
+    float: left;
+    font-weight: bold;
+    width: 100px;
+}
+label.address {
+    float: left;
+    width: 300px;
+    height: 100px;
+}
+input.textbox-300 {
+    float: left;
+    width: 400px;
+}
+.textBox {
+    width: 300px;
+    margin-left: 5px;
+}
+label.mail {
+    float: left;
+    width: 150px;
+    text-align: right;
+    font-weight: bold
+}
+.submitButton {
+    margin: 0 auto;
+    width: 50px;
+}
+fieldset p {
+    clear: both;
+    padding: 5px;
+}
+.top {
+    width: 400px;
+    border: 1px solid;
+    background-color: #339966;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+
+}
