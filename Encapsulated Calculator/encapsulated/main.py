@@ -137,6 +137,12 @@ class Balance(object):
     def end_balance(self):
         return self.__end_balance
 
+    @end_balance.setter
+    def end_balance(self, new_end_balance):
+        self.__end_balance = new_end_balance
+
+    def calc_balance(self):
+        self.__end_balance = self.initial_balance - self.debit1 - self.debit2 - self.debit3 - self.debit4 + self.credit1
 
 #never touch this!!
 app = webapp2.WSGIApplication([
