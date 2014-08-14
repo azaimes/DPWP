@@ -107,7 +107,22 @@ class MainHandler(webapp2.RequestHandler):
 
         page_body = page_body.format(**locals())
 
-        
+        if self.request.GET:
+            name = self.request.GET['name']
+            balance = self.request.GET['balance']
+            debit1 = self.request.GET['debit1']
+            debit2 = self.request.GET['debit2']
+            debit3 = self.request.GET['debit3']
+            debit4 = self.request.GET['debit4']
+            credit = self.request.GET['credit']
+            end_balance = self.request.GET['end_balance']
+
+            page_info = page_info.format(**locals())
+            self.response.write(page_head + page_info + page_close)
+        else:
+            self.response.write(page_head + page_body + page_close)
+
+
 #never touch this!!
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
