@@ -14,11 +14,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+'''
+Name: Adam Zaimes
+Date: 8/14/14
+Class: DPWP
+Assignment: Lab 2 Server Side Form
+'''
+
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        heading = '''<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Lab 2 Server Side Form</title>
+    </head>
+    <body>'''
+        page_body = '''
+        '''
+        page_close = '''
+    </body>
+</html>'''
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
