@@ -1,19 +1,3 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
 '''
 Name: Adam Zaimes
 Date: 8/14/14
@@ -24,7 +8,7 @@ Assignment: Lab 2 Server Side Form
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
+    def get(self):#begining of page
         heading = '''<!DOCTYPE HTML>
 <html>
     <head>
@@ -33,7 +17,7 @@ class MainHandler(webapp2.RequestHandler):
     </head>
     <body>
         <div class="wrapper">'''
-        #provides the form input
+        #provides the form for input
         page_form = '''<form method="GET">
 
             <fieldset>
@@ -63,11 +47,13 @@ class MainHandler(webapp2.RequestHandler):
             <p>Address: {address} {city}, {state} {zipcode}
         </div>
         '''
+        #end of page
         page_close = '''
         </form>
         </wrapper>
     </body>
 </html>'''
+        #script to collect data from form and process
         if self.request.GET:
             user = self.request.GET['user']
             email = self.request.GET['email']
@@ -78,9 +64,9 @@ class MainHandler(webapp2.RequestHandler):
             mail = self.request.GET['mail']
             terms = self.request.GET['terms']
             page_body = page_body.format(**locals())
-            self.response.write(heading + page_body + page_close)
+            self.response.write(heading + page_body + page_close) #shows form on page load
         else:
-            self.response.write(heading + page_form + page_close)
+            self.response.write(heading + page_form + page_close) #shows results from form
 
 
 app = webapp2.WSGIApplication([
