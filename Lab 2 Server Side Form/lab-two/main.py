@@ -43,7 +43,7 @@ class MainHandler(webapp2.RequestHandler):
                 <label class="field">Address</label><input class="textBox" type="text" name="address" /><br>
                 <label class="field">City</label><input class="textBox" type="text" name="city" /><br>
                 <label class="field">State</label><input class="textBox" type="text" name="state" /><br>
-                <label class="field">Zip Code</label><input class="textBox" type="text" name="zip" /><br>
+                <label class="field">Zip Code</label><input class="textBox" type="text" name="zipcode" /><br>
                 <label class="mail">Receive mailing</label><select name="mail">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -60,7 +60,7 @@ class MainHandler(webapp2.RequestHandler):
             <h2>Your information has been saved!</h2>
             <p>Name: {user}</p>
             <p>Email: {email}</p>
-            <p>Address: {address} {city}, {state}
+            <p>Address: {address} {city}, {state} {zipcode}
         </div>
         '''
         page_close = '''
@@ -74,7 +74,7 @@ class MainHandler(webapp2.RequestHandler):
             address = self.request.GET['address']
             city = self.request.GET['city']
             state = self.request.GET['state']
-            zip = self.request.GET['zip']
+            zipcode = self.request.GET['zipcode']
             mail = self.request.GET['mail']
             terms = self.request.GET['terms']
             page_body = page_body.format(**locals())
