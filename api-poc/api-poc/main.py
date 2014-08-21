@@ -56,7 +56,7 @@ class HouseView(object):  # shows user page and data received from api
     @houseget.setter
     def houseget(self, arr):
         self.__houseget = arr
-        self.__returned()
+        self.returned()
 
 
 class HouseModel(object):  # gets data from zillow
@@ -99,12 +99,12 @@ class HouseModel(object):  # gets data from zillow
         pass
 
     @city.setter
-    def city(self, cty):
-        self.__city = cty
+    def city(self, c):
+        self.__city = c
 
     @state.setter
-    def state(self, ste):
-        self.__state = ste
+    def state(self, s):
+        self.__state = s
 
 
 class HouseData(object):  # all the info gotten from the classes
