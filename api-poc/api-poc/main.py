@@ -118,6 +118,30 @@ class HouseData(object):  # all the info gotten from the classes
         self.affordability = ''
 
 
+class Page(object):  # structures the html
+    def __init__(self):
+        self._head = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>API POC Property search</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>'''
+
+        self._body = ''
+        self._foot = '''
+        </div>
+    </body>
+</html>'''
+
+    def print_out(self):
+        return self._head + self._body + self._foot
+
+
+
+
 
 
 
