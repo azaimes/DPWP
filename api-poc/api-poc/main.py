@@ -17,7 +17,10 @@ class MainHandler(webapp2.RequestHandler):
         fp = FormPage()
         fp.inputs = [['city', 'text', 'City'], ['state', 'text', 'State'], ['Submit', 'submit']]
 
-        if self.request.GET: 
+        if self.request.GET:  # only works if there is a city and state in the form fields
+            hm = HouseModel()
+            hm.city = self.request.GET['city']  # gets city from form
+            hm.state = self.request.GET['state'] # gets state from form
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
