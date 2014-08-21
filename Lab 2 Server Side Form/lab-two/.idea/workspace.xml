@@ -26,8 +26,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.85551333" vertical-offset="0" max-vertical-offset="1200">
+              <caret line="30" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -132,6 +132,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../DPW Repository/encap" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -373,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.85551333" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="30" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
           <folding />
         </state>
       </provider>
