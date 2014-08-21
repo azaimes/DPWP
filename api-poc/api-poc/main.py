@@ -28,7 +28,8 @@ class MainHandler(webapp2.RequestHandler):
 
         self.response.write(fp.print_out())
 
-class HouseView(object):  # shows data from api
+
+class HouseView(object):  # shows user page and data recieved from api
     def __init__(self):
         self.__houseget = []
         self.__content = '<br/>'
@@ -37,7 +38,50 @@ class HouseView(object):  # shows data from api
         for do in self.__houseget:
             self.__content += '<p>Here is the information you requested for houses located in ' + do.city + ', ' \
                               + do.state + '</p>'
-            self.__content += ''
+            self.__content += '<p>Select a link to see more information about this neighborhood</p><p><ul> \
+                                <li><a href="' + do.for_sale + '">For Sale</a></li>' \
+                                '<li><a href="' + do.owner_sale + '">For Sale By Owner</a></li>' \
+                                '<li><a href="' + do.foreclosure + '">Foreclosures</a></li>' \
+                                '<li><a href="' + do.recently_sold + '">Recently Sold</a></li>' \
+                                '<li><a href="' + do.affordability + '">Area Affordability</a></li></ul><br/>'
+
+    @property
+    def content(self):
+        return self.__content
+
+    @property
+    def houseget(self):
+        pass
+
+    @houseget.setter
+    def houseget(self, arr):
+        self.__houseget = arr
+        self.__returned()
+
+
+class HouseModel(object):  # gets data from zillow
+    def __init__(self):
+        self.__url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1b4fgi6xnuz_9hc6e&state="
+        self.__city = ''
+        self.__state = ''
+        self.__xmldoc = ''
+
+    def callApi(self):
+        request = urllib2.Request(self.__url + self.__state + "&city" + self.__city)
+
+        opener = urllib2.build_opener()
+
+        result = opener.open(request)  # gets info from api
+
+        self.__xmldoc = minidom.parse(result)  # parses the xml
+
+
+
+
+
+
+
+
 
 
 
