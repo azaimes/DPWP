@@ -11,7 +11,6 @@ import urllib2
 from xml.dom import minidom
 
 
-
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         fp = FormPage()
@@ -21,7 +20,18 @@ class MainHandler(webapp2.RequestHandler):
             hm = HouseModel()
             hm.city = self.request.GET['city']  # gets city from form
             hm.state = self.request.GET['state'] # gets state from form
+            hm.callApi()
 
+            hv = HouseView()
+            hv.housedo = hm.houses
+            fp._body = hv.content
+
+        self.response.write(fp.print_out())
+
+class
+
+
+#never touch this!!!
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)

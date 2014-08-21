@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69a059c8-ba44-4bb9-89cf-f271ea6e75aa" name="Default" comment="" />
+    <list default="true" id="69a059c8-ba44-4bb9-89cf-f271ea6e75aa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-poc/main.py" afterPath="$PROJECT_DIR$/api-poc/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="api-poc.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api-poc/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5418251" vertical-offset="0" max-vertical-offset="526">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.85551333" vertical-offset="0" max-vertical-offset="645">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="e#85#99#0" expanded="true" />
               </folding>
@@ -140,7 +143,11 @@
       <created>1408641383727</created>
       <updated>1408641383727</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added more to main handler">
+      <created>1408642227958</created>
+      <updated>1408642227958</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -184,7 +191,8 @@
     </option>
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="added more to main handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more to main handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -192,8 +200,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/api-poc/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5418251" vertical-offset="0" max-vertical-offset="526">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.85551333" vertical-offset="0" max-vertical-offset="645">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="e#85#99#0" expanded="true" />
           </folding>
