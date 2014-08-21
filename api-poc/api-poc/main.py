@@ -13,7 +13,7 @@ from xml.dom import minidom
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        fp = FormPage()
+        fp = FormCollect()  # gets use input
         fp.inputs = [['city', 'text', 'City'], ['state', 'text', 'State'], ['Submit', 'submit']]
 
         if self.request.GET:  # only works if there is a city and state in the form fields
@@ -29,7 +29,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(fp.print_out())
 
 
-class HouseView(object):  # shows user page and data recieved from api
+class HouseView(object):  # shows user page and data received from api
     def __init__(self):
         self.__houseget = []
         self.__content = '<br/>'
@@ -140,19 +140,30 @@ class Page(object):  # structures the html
         return self._head + self._body + self._foot
 
 
+class FormCollect(Page):  # initializes the form and collects the input data
+    def __init__(self):
+        super(FormCollect, self).__init__()
+        self._form_open = '<form method="GET">'
+        self._form_close = '</form>'
+        self.__inputs = []
+        self._form_inputs = ''
 
+    @property
+    def inputs(self):
+        pass
 
+    @inputs.setter
+    def inputs(self, arr):
+        for item in arr:
+            self._form_inputs += '<input type="' + item[1] + '" name="' + item[0]
+            try:
+                self._form_inputs += '" placeholder="' + item[2] + '" />'
+            except:
+                self._form_inputs += '" />'
 
-
-
-
-
-
-
-
-
-
-
+    def print_out(self):  # outputs the page
+        return self._head + "<h1> Look for Homes </h1>" + self._form_open + self._form_inputs + self._form_close + \
+            self._body + self._foot
 
 #never touch this!!!
 app = webapp2.WSGIApplication([
