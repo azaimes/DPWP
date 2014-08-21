@@ -75,6 +75,41 @@ class HouseModel(object):  # gets data from zillow
 
         self.__xmldoc = minidom.parse(result)  # parses the xml
 
+        self._houses = []
+        house = HouseData()
+        house.city = self.__xmldoc.getElementsByTagName('city')[1].firstChild.nodeValue
+        house.state = self.__xmldoc.getElementsByTagName('state')[1].firstChild.nodeValue
+        house.for_sale = self.__xmldoc.getElementsByTagName('forSale')[0].firstChild.nodeValue
+        house.owner_sale = self.__xmldoc.getElementsByTagName('forSaleByOwner')[0].firstChild.nodeValue
+        house.foreclosure = self.__xmldoc.getElementsByTagName('foreclosures')[0].firstChild.nodeValue
+        house.recently_sold = self.__xmldoc.getElementsByTagName('recentlySold')[0].firstChild.nodeValue
+        house.affordability = self.__xmldoc.getElementsByTagName('affordability')[0].firstChild.nodeValue
+        self._houses.append(house)
+
+    @property
+    def houses(self):
+        return self._houses
+
+    @property
+    def city(self):
+        pass
+
+    @property
+    def state(self):
+        pass
+
+    @city.setter
+    def city(self, cty):
+        self.__city = cty
+
+    @state.setter
+    def state(self, ste):
+        self.__state = ste
+
+
+class HouseData(object):  # all the info gotten from the classes
+    def __init__(self):
+        self.city = ''
 
 
 
