@@ -19,16 +19,27 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:  # only works if there is a city and state in the form fields
             hm = HouseModel()
             hm.city = self.request.GET['city']  # gets city from form
-            hm.state = self.request.GET['state'] # gets state from form
+            hm.state = self.request.GET['state']  # gets state from form
             hm.callApi()
 
             hv = HouseView()
-            hv.housedo = hm.houses
+            hv.houseget = hm.houses
             fp._body = hv.content
 
         self.response.write(fp.print_out())
 
-class
+class HouseView(object):  # shows data from api
+    def __init__(self):
+        self.__houseget = []
+        self.__content = '<br/>'
+
+    def returned(self):
+        for do in self.__houseget:
+            self.__content += '<p>Here is the information you requested for houses located in ' + do.city + ', ' \
+                              + do.state + '</p>'
+            self.__content += ''
+
+
 
 
 #never touch this!!!
