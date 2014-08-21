@@ -20,7 +20,7 @@ class MainHandler(webapp2.RequestHandler):
             hm = HouseModel()
             hm.city = self.request.GET['city']  # gets city from form
             hm.state = self.request.GET['state']  # gets state from form
-            hm.callApi()
+            hm.call_api()
 
             hv = HouseView()
             hv.houseget = hm.houses
@@ -40,7 +40,7 @@ class HouseView(object):  # shows user page and data recieved from api
                               + do.state + '</p>'
             self.__content += '<p>Select a link to see more information about this neighborhood</p><p><ul> \
                                 <li><a href="' + do.for_sale + '">For Sale</a></li>' \
-                                '<li><a href="' + do.owner_sale + '">For Sale By Owner</a></li>' \
+                                '<li><a href="' + do.fsbo + '">For Sale By Owner</a></li>' \
                                 '<li><a href="' + do.foreclosure + '">Foreclosures</a></li>' \
                                 '<li><a href="' + do.recently_sold + '">Recently Sold</a></li>' \
                                 '<li><a href="' + do.affordability + '">Area Affordability</a></li></ul><br/>'
@@ -66,7 +66,7 @@ class HouseModel(object):  # gets data from zillow
         self.__state = ''
         self.__xmldoc = ''
 
-    def callApi(self):
+    def call_api(self):
         request = urllib2.Request(self.__url + self.__state + "&city" + self.__city)
 
         opener = urllib2.build_opener()
@@ -80,7 +80,7 @@ class HouseModel(object):  # gets data from zillow
         house.city = self.__xmldoc.getElementsByTagName('city')[1].firstChild.nodeValue
         house.state = self.__xmldoc.getElementsByTagName('state')[1].firstChild.nodeValue
         house.for_sale = self.__xmldoc.getElementsByTagName('forSale')[0].firstChild.nodeValue
-        house.owner_sale = self.__xmldoc.getElementsByTagName('forSaleByOwner')[0].firstChild.nodeValue
+        house.fsbo = self.__xmldoc.getElementsByTagName('forSaleByOwner')[0].firstChild.nodeValue
         house.foreclosure = self.__xmldoc.getElementsByTagName('foreclosures')[0].firstChild.nodeValue
         house.recently_sold = self.__xmldoc.getElementsByTagName('recentlySold')[0].firstChild.nodeValue
         house.affordability = self.__xmldoc.getElementsByTagName('affordability')[0].firstChild.nodeValue
@@ -110,6 +110,15 @@ class HouseModel(object):  # gets data from zillow
 class HouseData(object):  # all the info gotten from the classes
     def __init__(self):
         self.city = ''
+        self.state = ''
+        self.for_sale = ''
+        self.fsbo = ''
+        self.foreclosure = ''
+        self.recently_sold = ''
+        self.affordability = ''
+
+
+
 
 
 

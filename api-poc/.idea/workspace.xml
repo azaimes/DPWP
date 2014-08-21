@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69a059c8-ba44-4bb9-89cf-f271ea6e75aa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/azaimes.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/azaimes.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-poc/main.py" afterPath="$PROJECT_DIR$/api-poc/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,8 +30,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api-poc/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7475456" vertical-offset="1132" max-vertical-offset="1995">
-              <caret line="111" column="22" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.95231414" vertical-offset="1106" max-vertical-offset="2130">
+              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="e#85#99#0" expanded="true" />
               </folding>
@@ -279,7 +280,11 @@
       <created>1408645545662</created>
       <updated>1408645545662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finished class and started next class">
+      <created>1408646151455</created>
+      <updated>1408646151455</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -326,7 +331,8 @@
     <MESSAGE value="added more to main handler" />
     <MESSAGE value="started another class" />
     <MESSAGE value="started another class added some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="started another class added some comments" />
+    <MESSAGE value="finished class and started next class" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished class and started next class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -334,8 +340,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/api-poc/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7475456" vertical-offset="1132" max-vertical-offset="1995">
-          <caret line="111" column="22" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.95231414" vertical-offset="1106" max-vertical-offset="2130">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="e#85#99#0" expanded="true" />
           </folding>
