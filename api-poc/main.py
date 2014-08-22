@@ -41,7 +41,7 @@ class Page(object):  # sets up the page structure
 </html>'''
 
     def print_out(self):
-        return self._head + self._body + self._footer
+        return self._head + self._body + self._close
 
 
 class FormPage(object):
@@ -59,9 +59,14 @@ class FormPage(object):
     @inputs.setter
     def inputs(self, arr):
         for item in arr:
+            self._form_inputs += '<input type="' + item[1] + '" name="' + item[0]
+            try:
+                self._form_inputs += '" placeholder="' + item[2] + '" />'
+            except:
+                self._form_inputs += '" />'
 
-
-
+    def print_out(self):  # outputs everything to page
+        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
 
 # don't ever mess with this
 app = webapp2.WSGIApplication([
