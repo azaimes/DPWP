@@ -29,8 +29,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="570">
-              <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.64" vertical-offset="340" max-vertical-offset="840">
+              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -139,7 +139,11 @@
       <created>1408668439034</created>
       <updated>1408668439034</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed indentation error">
+      <created>1408668727896</created>
+      <updated>1408668727896</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -185,7 +189,8 @@
     <MESSAGE value="setup input" />
     <MESSAGE value="added part of first class&#10;" />
     <MESSAGE value="added more" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more" />
+    <MESSAGE value="fixed indentation error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed indentation error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -193,8 +198,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="570">
-          <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.64" vertical-offset="340" max-vertical-offset="840">
+          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

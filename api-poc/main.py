@@ -25,6 +25,24 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(xmldoc.getElementsByTagName('zip')[0].firstCild.nodeValue)
 
 
+class Page(object):
+    def __init__(self):
+        self._head = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Proof of Concept</title>
+    </head>
+    <body>'''
+
+        self._body = 'SEARCH'
+        self._close = '''
+    </body>
+</html>'''
+
+    def print_out(self):
+        return self._head + self._body + self._footer
+
 
 # don't ever mess with this
 app = webapp2.WSGIApplication([
