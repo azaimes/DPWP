@@ -29,8 +29,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66" vertical-offset="0" max-vertical-offset="540">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="570">
+              <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -135,7 +135,11 @@
       <created>1408668306242</created>
       <updated>1408668306242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added more">
+      <created>1408668439034</created>
+      <updated>1408668439034</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -180,7 +184,8 @@
     <MESSAGE value="setup imports" />
     <MESSAGE value="setup input" />
     <MESSAGE value="added part of first class&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added part of first class&#10;" />
+    <MESSAGE value="added more" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -188,8 +193,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66" vertical-offset="0" max-vertical-offset="540">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="570">
+          <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
