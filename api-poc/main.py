@@ -30,11 +30,11 @@ class Page(object):  # html is added here
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>API POC</title>
     </head>
     <body>'''
 
-        self._body = 'Home Search'
+        self._body = 'Search for a home:'
         self._close = '''
     </body>
 </html>'''
@@ -65,10 +65,10 @@ class FormPage(Page):
             except:
                 self._form_inputs += '" />'
 
-    def print_out(self):
+    def print_out(self):  # puts it all together so it can be put on the page
         return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
 
-
+#  if you touch this a kitten will die
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
