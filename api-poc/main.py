@@ -25,7 +25,7 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(xmldoc.getElementsByTagName('zip')[0].firstCild.nodeValue)
 
 
-class Page(object):
+class Page(object):  # sets up the page structure
     def __init__(self):
         self._head = '''
 <!DOCTYPE HTML>
@@ -42,6 +42,25 @@ class Page(object):
 
     def print_out(self):
         return self._head + self._body + self._footer
+
+
+class FormPage(object):
+    def __init__(self):
+        super(FormPage, self).__init__()
+        self._form_open = '<form method="GET"'
+        self._form_close = '</form>'
+        self._inputs = []
+        self._form_inputs = ''
+
+    @property
+    def inputs(self):
+        pass
+
+    @inputs.setter
+    def inputs(self, arr):
+        for item in arr:
+
+
 
 
 # don't ever mess with this
