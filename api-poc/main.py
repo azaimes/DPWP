@@ -15,7 +15,12 @@ class MainHandler(webapp2.RequestHandler):
 
         opener = urllib2.build_opener()  # uses urllib2 to get the url
 
+        result = opener.open(request)  # gets the result from the url
 
+        xmldoc = minidom.parse(result)  # parse xml
+        print xmldoc
+
+        self.response.write()
 
 
 
