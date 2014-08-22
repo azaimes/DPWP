@@ -44,7 +44,7 @@ class Page(object):  # sets up the page structure
         return self._head + self._body + self._close
 
 
-class FormPage(object):
+class FormPage(Page):
     def __init__(self):
         super(FormPage, self).__init__()
         self._form_open = '<form method="GET"'
@@ -67,6 +67,7 @@ class FormPage(object):
 
     def print_out(self):  # outputs everything to page
         return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+
 
 # don't ever mess with this
 app = webapp2.WSGIApplication([
