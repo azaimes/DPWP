@@ -1,12 +1,17 @@
+'''
+Name: Adam Zaimes
+Date: 8/28/2014
+Class: DPWP
+Assignment: Final
+'''
 import webapp2
-import urllib2 #python classes and code needed to requesting info, receiving, and opening
+import urllib2  # python classes and code needed to requesting info, receiving, and opening
 from xml.dom import minidom
 
 class MainHandler(webapp2.RequestHandler):
-    # This class is the controller and is collecting and sending the information from the view to the model class
-    def get(self):
+    def get(self):  # Controller that collects and sends data to  view model
         p = FormPage()
-        p.inputs = [['city', 'text', 'City'],['state', 'text', 'State'],['Submit', 'submit']]
+        p.inputs = [['city', 'text', 'City'], ['state', 'text', 'State'], ['Submit', 'submit']]
 
         if self.request.GET: #only if there is a city and state in the url
             #get info from the API and creates model
@@ -15,7 +20,7 @@ class MainHandler(webapp2.RequestHandler):
             hm.state = self.request.GET['state']
             hm.callApi()
 
-            #taking the data from the model class and send it to the view class
+            # takes data from model class and then sends it to the view class
             hv = HouseView()
             hv.housedo = hm.houses
             p._body = hv.content
@@ -24,15 +29,14 @@ class MainHandler(webapp2.RequestHandler):
 
 
 class HouseView(object):
-    ''' This class is creating what the user will view and shows the information from the API call '''
-    def __init__(self):
+    def __init__(self):  # creates output from API call
         self.__housedo = []
         self.__content = '<br/>'
 
     def update(self):
-        for do in self.__housedo:
-            self.__content += "<p>Showing information for houses in: <br/><h2>" + do.city + ", " + do.state + "</h2></p>"
-            self.__content += '<p>Use the links below to find out more information about this area</p><p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale By Owner</a></li><li><a href="' + do.foreclosure + '">Foreclosures</a></li><li><a href="' + do.recently_sold + '">Recently Sold</a></li><li><a href="' + do.affordability + '">Area Affordability</a></li><p class="footer">Home Value In This Area: <strong>' + do.home_value + '</strong><br/>Property Tax In This Area: <strong>' + do.property_tax + '</strong></p>'
+        for do in self.__housedo:  # provides basic framework for users view
+            self.__content += "<p>Showing results for houses in: <br/><h2>" + do.city + ", " + do.state + "</h2></p>"
+            self.__content += '<p>Find all the essential data on homes within your search area using the links below.</p><p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale By Owner</a></li><li><a href="' + do.foreclosure + '">Foreclosures</a></li><li><a href="' + do.recently_sold + '">Recently Sold</a></li><li><a href="' + do.affordability + '">Area Affordability</a></li><p class="footer">Home Value In This Area: <strong>' + do.home_value + '</strong><br/>Property Tax In This Area: <strong>' + do.property_tax + '</strong></p>'
 
     @property
     def content(self):
@@ -47,26 +51,22 @@ class HouseView(object):
         self.__housedo = arr
         self.update()
 
+
 class HouseModel(object):
-    ''' This class is where the data is fetched, parsed, and sorted from the Zillow API '''
-    def __init__(self):
+    def __init__(self):  # provides api information for data retrieval parsing and sorting
         self.__url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1b49raz7yff_3jtqm&state="
         self.__city = ''
         self.__state = ''
         self.__xmldoc = ''
 
     def callApi(self):
-        #assemble the request
-        request = urllib2.Request(self.__url + self.__state + "&city=" + self.__city)
+        request = urllib2.Request(self.__url + self.__state + "&city=" + self.__city)  # assembles the request for the api
 
-        #use the urllib2 library to create an object to get the url
-        opener = urllib2.build_opener()
+        opener = urllib2.build_opener()  # uses urllib2 and creates obj to get url
 
-        #use the url to get a result - requesting info from the API
-        result = opener.open(request)
+        result = opener.open(request)  # request data from api from url provided
 
-        #parse the XML
-        self.__xmldoc = minidom.parse(result)
+        self.__xmldoc = minidom.parse(result)  # parses XML
 
         self._houses = []
         house = HouseData()
@@ -103,21 +103,7 @@ class HouseModel(object):
 
 
 class HouseData(object):
-    ''' This object holds all of the data that is fetched from the model class and show by the view class '''
-    def __init__(self):
-        self.city = ''
-        self.state = ''
-        self.for_sale = ''
-        self.owner_sale = ''
-        self.foreclosure = ''
-        self.recently_sold = ''
-        self.affordability = ''
-        self.home_value = ''
-        self.property_tax = ''
-
-class Page(object):
-    ''' This class is holding the main page information and skeleton '''
-    def __init__(self):
+    def __init__(self):  # main page and outline of data
         self._head = '''
 <!DOCTYPE HTML>
 <html>
@@ -170,6 +156,7 @@ class FormPage(Page):
         return self._head + "<h1>Find Your Dream Home</h1><p>Fill out the city and state you want to look in:</p>" + self._form_open + self._form_inputs + self._form_close + self._body +  self._close
 
 
+#don't ever mess with this
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
