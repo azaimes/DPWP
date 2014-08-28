@@ -20,8 +20,15 @@ class MainHandler(webapp2.RequestHandler):
             hm.state = self.request.GET['state']
             hm.callApi()
 
-
+            # takes data from model class and then sends it to the view class
+            hv = HouseView()
+            hv.housedo = hm.houses
+            p._body = hv.content
             
+        self.response.write(p.print_out())
+
+
+
 #don't ever mess with this
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
