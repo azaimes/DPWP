@@ -1,3 +1,9 @@
+'''
+Name: Adam Zaimes
+Date: 8/28/2014
+Class: DPWP
+Assignment: API
+'''
 import webapp2
 import urllib2 #python classes and code needed to requesting info, receiving, and opening
 from xml.dom import minidom
