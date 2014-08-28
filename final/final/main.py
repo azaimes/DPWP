@@ -59,7 +59,7 @@ class HouseModel(object):
         self.__state = ''
         self.__xmldoc = ''
 
-     def callApi(self):
+    def callApi(self):
         request = urllib2.Request(self.__url + self.__state + "&city=" + self.__city)  # assembles the request for the api
 
         opener = urllib2.build_opener()  # uses urllib2 and creates obj to get url
@@ -67,6 +67,19 @@ class HouseModel(object):
         result = opener.open(request)  # request data from api from url provided
 
         self.__xmldoc = minidom.parse(result)  # parses XML
+
+        self._houses = []
+        house = HouseData()
+        house.city = self.__xmldoc.getElementsByTagName('city')[1].firstChild.nodeValue
+        house.state = self.__xmldoc.getElementsByTagName('state')[1].firstChild.nodeValue
+        house.for_sale = self.__xmldoc.getElementsByTagName('forSale')[0].firstChild.nodeValue
+        house.owner_sale = self.__xmldoc.getElementsByTagName('forSaleByOwner')[0].firstChild.nodeValue
+        house.foreclosure = self.__xmldoc.getElementsByTagName('foreclosures')[0].firstChild.nodeValue
+        house.recently_sold = self.__xmldoc.getElementsByTagName('recentlySold')[0].firstChild.nodeValue
+        house.affordability = self.__xmldoc.getElementsByTagName('affordability')[0].firstChild.nodeValue
+        house.home_value = self.__xmldoc.getElementsByTagName('value')[2].firstChild.nodeValue
+        house.property_tax = self.__xmldoc.getElementsByTagName('value')[26].firstChild.nodeValue
+        self._houses.append(house)
 
         
 
