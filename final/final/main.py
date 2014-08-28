@@ -85,6 +85,22 @@ class HouseModel(object):
     def houses(self):
         return self._houses
 
+    @property
+    def city(self):
+        pass
+
+    @property
+    def state(self):
+        pass
+
+    @city.setter
+    def city(self, c):
+        self.__city = c
+
+    @state.setter
+    def state(self, s):
+        self.__state = s
+
 
 #don't ever mess with this
 app = webapp2.WSGIApplication([
