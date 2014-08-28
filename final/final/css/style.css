@@ -1,0 +1,32 @@
+body {
+    background-color: lightgrey;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 70%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    overflow: auto;
+}
+header {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+.main {
+    padding: 1em 1em 5em 1em;
+    float: left;
+    clear: both;
+    width: 60%;
+}
+.image {
+    float: right;
+    width: 25%;
+    padding-top: 3em;
+}
+.image img {
+    height: 50%;
+    width: 50%;
