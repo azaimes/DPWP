@@ -24,7 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
 class HouseView(object):
-    ''' This class is creating what the user will view and shows the information from the API call '''
+    # This class is creating what the user will view and shows the information from the API call
     def __init__(self):
         self.__housedo = []
         self.__content = '<br/>'
@@ -48,7 +48,7 @@ class HouseView(object):
         self.update()
 
 class HouseModel(object):
-    ''' This class is where the data is fetched, parsed, and sorted from the Zillow API '''
+    # This class is where the data is fetched, parsed, and sorted from the Zillow API
     def __init__(self):
         self.__url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1b49raz7yff_3jtqm&state="
         self.__city = ''
@@ -103,7 +103,7 @@ class HouseModel(object):
 
 
 class HouseData(object):
-    ''' This object holds all of the data that is fetched from the model class and show by the view class '''
+    #  This object holds all of the data that is fetched from the model class and show by the view class
     def __init__(self):
         self.city = ''
         self.state = ''
@@ -115,8 +115,9 @@ class HouseData(object):
         self.home_value = ''
         self.property_tax = ''
 
+
 class Page(object):
-    ''' This class is holding the main page information and skeleton '''
+    # This class is holding the main page information and skeleton
     def __init__(self):
         self._head = '''
 <!DOCTYPE HTML>
@@ -169,7 +170,7 @@ class FormPage(Page):
     def print_out(self):
         return self._head + "<h1>Find Your Dream Home</h1><p>Fill out the city and state you want to look in:</p>" + self._form_open + self._form_inputs + self._form_close + self._body +  self._close
 
-
+# don't even think of touching this
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
