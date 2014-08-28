@@ -34,9 +34,24 @@ class HouseView(object):
         self.__content = '<br/>'
 
     def update(self):
-        for do in self.__housedo:
+        for do in self.__housedo:  # provides basic framework for users view
             self.__content += "<p>Showing results for houses in: <br/><h2>" + do.city + ", " + do.state + "</h2></p>"
             self.__content += '<p>Find all the essential data on homes within your search area using the links below.</p><p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale By Owner</a></li><li><a href="' + do.foreclosure + '">Foreclosures</a></li><li><a href="' + do.recently_sold + '">Recently Sold</a></li><li><a href="' + do.affordability + '">Area Affordability</a></li><p class="footer">Home Value In This Area: <strong>' + do.home_value + '</strong><br/>Property Tax In This Area: <strong>' + do.property_tax + '</strong></p>'
+
+    @property
+    def content(self):
+        return self.__content
+
+    @property
+    def housedo(self):
+        pass
+
+    @housedo.setter
+    def housedo(self, arr):
+        self.__housedo = arr
+        self.update()
+
+
 
 
 
