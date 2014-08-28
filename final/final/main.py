@@ -24,8 +24,14 @@ class MainHandler(webapp2.RequestHandler):
             hv = HouseView()
             hv.housedo = hm.houses
             p._body = hv.content
-            
+
         self.response.write(p.print_out())
+
+
+class HouseView(object):
+    def __init__(self):  # creates output from API call
+        self.__housedo = []
+        self.__content = '<br/>'
 
 
 
