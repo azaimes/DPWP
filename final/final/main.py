@@ -103,7 +103,32 @@ class HouseModel(object):
 
 
 class HouseData(object):
-    def __init__(self):
+    def __init__(self):  # main page and outline of data
+        self._head = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>House Hunter</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>House Hunter</header>
+             <div class="main">'''
+
+        self._body = ''
+        self._close = '''
+             </div>
+             <div class="image">
+                <img src="images/house.png" />
+             </div>
+       </div>
+    </body>
+</html>'''
+
+    def print_out(self):
+        return self._head + self._body + self._close
+
 
 #don't ever mess with this
 app = webapp2.WSGIApplication([
