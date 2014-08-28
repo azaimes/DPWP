@@ -102,6 +102,9 @@ class HouseModel(object):
         self.__state = s
 
 
+class HouseData(object):
+    def __init__(self):
+
 #don't ever mess with this
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
