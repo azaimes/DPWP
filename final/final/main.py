@@ -52,7 +52,12 @@ class HouseView(object):
         self.update()
 
 
-
+class HouseModel(object):
+    def __init__(self):  # provides api information for data retrieval parsing and sorting
+        self.__url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1b49raz7yff_3jtqm&state="
+        self.__city = ''
+        self.__state = ''
+        self.__xmldoc = ''
 
 
 #don't ever mess with this
