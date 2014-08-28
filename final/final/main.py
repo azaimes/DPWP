@@ -81,7 +81,9 @@ class HouseModel(object):
         house.property_tax = self.__xmldoc.getElementsByTagName('value')[26].firstChild.nodeValue
         self._houses.append(house)
 
-        
+    @property
+    def houses(self):
+        return self._houses
 
 
 #don't ever mess with this
