@@ -59,6 +59,17 @@ class HouseModel(object):
         self.__state = ''
         self.__xmldoc = ''
 
+     def callApi(self):
+        request = urllib2.Request(self.__url + self.__state + "&city=" + self.__city)  # assembles the request for the api
+
+        opener = urllib2.build_opener()  # uses urllib2 and creates obj to get url
+
+        result = opener.open(request)  # request data from api from url provided
+
+        self.__xmldoc = minidom.parse(result)  # parses XML
+
+        
+
 
 #don't ever mess with this
 app = webapp2.WSGIApplication([
