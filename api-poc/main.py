@@ -16,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET:  # this only will work if there is a zip code in the text field which is sent to the url
             zip = self.request.GET['zip']
-            url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1b4eovrcw7f_a1050&zip="+zip
+            url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1b49raz7yff_3jtqm&zip="+zip
             request = urllib2.Request(url)  # puts the request together
 
             opener = urllib2.build_opener()  # uses urllib2 to get the url
